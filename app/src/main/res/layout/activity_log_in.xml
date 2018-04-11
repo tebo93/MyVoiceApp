@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LogInActivity">
+
+    <TextView
+        android:id="@+id/activity_login_tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/email"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/activity_login_et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_login_tv_email"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/activity_login_tv_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_login_et_email"
+        android:layout_margin="15dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/password"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/activity_login_et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_login_tv_password"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/activity_login_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_login_et_password"
+        android:text="@string/login"
+        android:layout_margin="15dp" />
+
+</RelativeLayout>

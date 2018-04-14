@@ -20,6 +20,7 @@ public class AccueilActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private AccueilController ac;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +56,7 @@ public class AccueilActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        if(!this.ac.backPress()){
+        if (!this.ac.backPress()) {
             super.onBackPressed();
         }
     }
@@ -89,6 +90,10 @@ public class AccueilActivity extends AppCompatActivity
         int id = item.getItemId();
         if (id == R.id.nav_classes) {
             this.ac.nav_classes();
+        } else if (id == R.id.nav_logout) {
+            this.ac.nav_logout();
+        } else if(id == R.id.nav_my_account){
+            this.ac.nav_my_account();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

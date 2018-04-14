@@ -15,4 +15,12 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="my_classes">My Classes</string>
+    <string name="username">Username</string>
+    <string name="subject">Subject</string>
+    <string name="institution">Institution</string>
+    <string name="data_entered_error">Error in the data entered</string>
+    <string name="email_or_password_wrong">Wront combination of email and password</string>
+    <string name="logout">Log out</string>
+    <string name="empty" />
+    <string name="my_account">My Account</string>
 </resources>

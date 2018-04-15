@@ -1,5 +1,5 @@
 package com.t.myvoiceapp.controller.controllers;
 
 public class Controller {
-    public static final String IP = "http://172.30.146.98:8080";
+    public static final String IP = "http://192.168.1.112:8080";
 }

@@ -2,13 +2,14 @@ package com.t.myvoiceapp.controller.asyncTask
 
 import android.os.AsyncTask
 import com.t.myvoiceapp.controller.controllers.CreateAccountController
+import com.t.myvoiceapp.controller.controllers.SeeAccountController
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 
-class DeleteUserAsyncTask(var c: CreateAccountController) : AsyncTask<String, String, String>() {
+class DeleteUserAsyncTask(var c: SeeAccountController) : AsyncTask<String, String, String>() {
 
     override fun doInBackground(vararg params: String?): String {
         var result = ""
@@ -43,7 +44,7 @@ class DeleteUserAsyncTask(var c: CreateAccountController) : AsyncTask<String, St
     override fun onPostExecute(result: String?) {
         try {
             val json = JSONObject(result)
-            c.result(json.getString("result"))
+            c.deleteResult(json.getString("result"))
         } catch (e: Exception) {
             try {
                 val json = JSONObject(result)
@@ -58,9 +59,8 @@ class DeleteUserAsyncTask(var c: CreateAccountController) : AsyncTask<String, St
         conn.requestMethod = "DELETE"
         conn.setRequestProperty("User-Agent", java.lang.System.getProperty("http.agent"))
         conn.setRequestProperty("Accept-Language", "en-US,en;q=0.5")
-        conn.setRequestProperty("x_username", params[1])
-        conn.setRequestProperty("x_email", params[2])
-        conn.setRequestProperty("x_password", params[3])
+        conn.setRequestProperty("x_email", params[1])
+        conn.setRequestProperty("x_password", params[2])
         conn.doInput = true
     }
 }

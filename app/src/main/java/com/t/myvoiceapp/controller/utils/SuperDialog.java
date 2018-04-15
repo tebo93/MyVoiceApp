@@ -154,6 +154,27 @@ public class SuperDialog {
     }
 
     /**
+     *
+     * @param x
+     * @param title
+     * @param yes
+     * @param no
+     */
+    public static void openDialogCustomYesNo(Context x,
+                                             String title,
+                                             String message,
+                                             DialogInterface.OnClickListener yes,
+                                             DialogInterface.OnClickListener no) {
+        new AlertDialog.Builder(x)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton(android.R.string.yes, yes)
+                .setNegativeButton(android.R.string.no, no)
+                .show();
+    }
+
+
+    /**
      * This function will open a view as a Dialog
      * @param x Activity
      * @param title Tittle to be shown

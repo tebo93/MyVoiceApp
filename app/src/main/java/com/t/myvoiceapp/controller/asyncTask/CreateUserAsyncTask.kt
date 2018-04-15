@@ -1,6 +1,7 @@
 package com.t.myvoiceapp.controller.asyncTask
 
 import android.os.AsyncTask
+import com.t.myvoiceapp.controller.controllers.CreateAccountController
 import com.t.myvoiceapp.controller.controllers.SeeAccountController
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -8,7 +9,7 @@ import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 
-class CreateUserAsyncTask(var c: SeeAccountController) : AsyncTask<String, String, String>() {
+class CreateUserAsyncTask(var c: CreateAccountController) : AsyncTask<String, String, String>() {
 
     override fun doInBackground(vararg params: String?): String {
         var result = ""

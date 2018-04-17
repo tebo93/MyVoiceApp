@@ -135,6 +135,5 @@ class SeeAccountController {
                    v, _->
                     v.cancel()
                 })
-
     }
 }

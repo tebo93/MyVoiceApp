@@ -26,26 +26,6 @@ public class AccueilActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
         this.ac = new AccueilController(this);
-       /* Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);*/
     }
 
     @Override
@@ -92,8 +72,10 @@ public class AccueilActivity extends AppCompatActivity
             this.ac.nav_classes();
         } else if (id == R.id.nav_logout) {
             this.ac.nav_logout();
-        } else if(id == R.id.nav_my_account){
+        } else if (id == R.id.nav_my_account) {
             this.ac.nav_my_account();
+        } else if (id == R.id.nav_languages) {
+            this.ac.nav_languages();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

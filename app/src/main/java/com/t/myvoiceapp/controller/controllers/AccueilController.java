@@ -18,6 +18,7 @@ import com.t.myvoiceapp.model.Account;
 import com.t.myvoiceapp.view.AccueilActivity;
 import com.t.myvoiceapp.view.MainActivity;
 import com.t.myvoiceapp.view.SeeAccountActivity;
+import com.t.myvoiceapp.view.SeeChooseAddLanguageActivity;
 
 import java.util.ArrayList;
 
@@ -68,12 +69,16 @@ public class AccueilController {
         SuperDialog.createToastMessage(this.aa, "abrete classes");
     }
 
+    public void nav_languages() {
+        Intent i = new Intent(aa, SeeChooseAddLanguageActivity.class);
+        aa.startActivity(i);
+    }
+
     public void nav_logout() {
         FileHandler.saveFile(aa, "config.dat", new ArrayList<String>());
         a.setAllNull();
         Intent i = new Intent(aa, MainActivity.class);
         aa.startActivity(i);
-
     }
 
     public void action_settings() {

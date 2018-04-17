@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Created by Esteban Puello on 25/10/2016.
  *
@@ -205,4 +207,13 @@ public class SuperDialog {
         return alertDialog;
     }
 
+    @NotNull
+    public static Object openDialogCustomDialog(@NotNull Context x, @NotNull String title, @NotNull View v, @NotNull DialogInterface.OnClickListener yes, @NotNull DialogInterface.OnClickListener no) {
+        return new AlertDialog.Builder(x)
+                .setTitle(title)
+                .setView(v)
+                .setPositiveButton(android.R.string.yes, yes)
+                .setNegativeButton(android.R.string.no, no)
+                .show();
+    }
 }

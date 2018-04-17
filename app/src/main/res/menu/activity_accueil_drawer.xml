@@ -13,6 +13,10 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/my_classes" />
         <item
+            android:id="@+id/nav_languages"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/my_languages" />
+        <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/logout" />
